@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock %}
+{% block content %}
+{% block header %}
+{% endblock %}
+<style>
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    .animate-float {
+      animation: float 2s ease-in-out infinite;
+    }
+    </style>
+    
+    <div class="flex justify-center items-center min-h-screen bg-gray-900">
+        <div class="p-6 rounded shadow-lg max-w-md text-center bg-gray-800">
+            <!-- Floating lock icon -->
+            <div class="animate-float mb-4">
+                <svg class="w-16 h-16 text-red-600 mx-auto" fill="none" stroke="currentColor" stroke-width="1.5"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M16.5 10V7a4.5 4.5 0 00-9 0v3m-.75 0h10.5a.75.75 0 01.75.75v9.5a.75.75 0 01-.75.75H5.25a.75.75 0 01-.75-.75v-9.5a.75.75 0 01.75-.75z" />
+                </svg>
+            </div>
+    
+            <h1 class="text-2xl font-bold text-red-600 mb-4">You're Locked Out</h1>
+            <p class="mb-4 text-white">
+                Too many failed login attempts. Please try again later or contact support.
+            </p>
+            <a href="{% url 'authentication:login' %}"
+               class="inline-block mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">
+                Back to Login
+            </a>
+        </div>
+    </div>    
+{% endblock %}
+{% block footer %}
+{% endblock %}

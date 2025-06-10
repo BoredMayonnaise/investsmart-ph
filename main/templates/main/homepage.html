@@ -1,0 +1,537 @@
+{% extends 'base.html' %}
+{% block title %}Homepage{% endblock %}
+{% block content %}
+<section class="py-20 px-4 text-center bg-gray-900">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 text-white leading-tight">
+        Smarter Investing for Every Filipino
+      </h2>
+      <p class="text-lg sm:text-xl text-gray-400 mb-6">
+        Turn every day into payday with secure wallets and instant rewards, all in one smooth ride.
+      </p>
+      <a href="/register"
+         class="inline-block w-full sm:w-auto px-6 py-3 text-white bg-green-600 hover:bg-green-500 rounded-full font-semibold transition">
+        Get Started
+      </a>
+    </div>
+</section>
+
+<section id="features" class="py-16 bg-gray-950">
+    <div class="container mx-auto px-6 max-w-7xl">
+      <h3 class="text-4xl sm:text-5xl font-extrabold mb-14 text-green-500 drop-shadow-md text-center" data-aos="fade-up">
+        Why Choose Our Membership?
+      </h3>
+      <div class="grid gap-12 sm:grid-cols-1 md:grid-cols-3 text-left">
+  
+        <div class="flex gap-5 p-6 rounded-lg bg-gray-900 border border-green-600 hover:bg-green-900 shadow-lg hover:shadow-green-500/50 transition-shadow cursor-pointer"
+             data-aos="fade-up" data-aos-delay="0">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 flex-shrink-0 text-green-400" stroke="#32CD32" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 3v18h18" />
+            <path d="M3 14l5-5 4 4 5-5 4 4" />
+          </svg>
+          <div>
+            <h4 class="text-2xl font-bold text-green-400 mb-2">Daily ROI</h4>
+            <p class="text-gray-300 text-lg leading-relaxed">
+              Enjoy daily automated profit payouts exclusive to our membership.
+            </p>
+          </div>
+        </div>
+  
+        <div class="flex gap-5 p-6 rounded-lg bg-gray-900 border border-green-600 hover:bg-green-900 shadow-lg hover:shadow-green-500/50 transition-shadow cursor-pointer"
+             data-aos="fade-up" data-aos-delay="100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 flex-shrink-0 text-green-400" stroke="#32CD32" viewBox="0 0 24 24" fill="none"
+               stroke-linecap="round" stroke-linejoin="round" id="Affiliate--Streamline-Tabler">
+            <path d="m5.931 6.936 1.275 4.249m5.607 5.609 4.251 1.275" stroke="currentColor" stroke-width="2" />
+            <path d="m11.683 12.317 5.759 -5.759" stroke="currentColor" stroke-width="2" />
+            <path d="M4 5.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 1 0 -3 0" stroke="currentColor" stroke-width="2" />
+            <path d="M17 5.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 1 0 -3 0" stroke="currentColor" stroke-width="2" />
+            <path d="M17 18.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 1 0 -3 0" stroke="currentColor" stroke-width="2" />
+            <path d="M4 15.5a4.5 4.5 0 1 0 9 0 4.5 4.5 0 1 0 -9 0" stroke="currentColor" stroke-width="2" />
+          </svg>
+          <div>
+            <h4 class="text-2xl font-bold text-green-400 mb-2">Referral Earnings</h4>
+            <p class="text-gray-300 text-lg leading-relaxed">
+              Invite friends and earn commissions as a valued member.
+            </p>
+          </div>
+        </div>
+  
+        <div class="flex gap-5 p-6 rounded-lg bg-gray-900 border border-green-600 hover:bg-green-900 shadow-lg hover:shadow-green-500/50 transition-shadow cursor-pointer"
+        data-aos="fade-up" data-aos-delay="200">
+     <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 flex-shrink-0 text-green-400" viewBox="0 0 24 24" fill="none" stroke="#32CD32" stroke-linecap="round" stroke-linejoin="round" id="Shield-Lock--Streamline-Tabler">
+       <path d="M12 3a12 12 0 0 0 8.5 3A12 12 0 0 1 12 21 12 12 0 0 1 3.5 6 12 12 0 0 0 12 3" stroke-width="2"></path>
+       <path d="M11 11a1 1 0 1 0 2 0 1 1 0 1 0 -2 0" stroke-width="2"></path>
+       <path d="m12 12 0 2.5" stroke-width="2"></path>
+     </svg>
+   
+     <div>
+       <h4 class="text-2xl font-bold text-green-400 mb-2">Bank-Grade Security</h4>
+       <p class="text-gray-300 text-lg leading-relaxed">
+         Your data and funds are protected with encryption and 2FA.
+       </p>
+     </div>
+   </div>
+     
+      </div>
+    </div>
+  </section>
+
+  <section id="plans" class="py-20 bg-gray-900">
+    <div class="container mx-auto text-center px-4">
+      <h3 class="text-4xl sm:text-5xl font-extrabold mb-14 text-green-500 drop-shadow-md text-center" data-aos="fade-down">Investment Plans</h3>
+  
+      <div class="grid gap-8 md:grid-cols-3">
+        
+        <div class="plan-card bg-gray-800 rounded-2xl p-8 border border-green-600 shadow-xl hover:shadow-2xl transition-shadow duration-300 cursor-pointer flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 mb-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c1.656 0 3-1.344 3-3S13.656 2 12 2 9 3.344 9 5s1.344 3 3 3zM12 10c-3.866 0-7 3.134-7 7v3h14v-3c0-3.866-3.134-7-7-7z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 16h6" />
+          </svg>
+          <h4 class="text-2xl font-bold text-green-400 mb-2">Starter</h4>
+          <p class="text-gray-300 text-lg mb-4">₱200 Min • 2% Daily for <span class="font-semibold">30 Days</span></p>
+          <p class="text-green-300 text-md mb-6 italic">Earn daily profits for 30 days!</p>
+          <a href="/register" class="w-full bg-green-600 hover:bg-green-500 text-white font-semibold py-3 rounded-lg transition-colors duration-300 text-center">Invest Now</a>
+        </div>
+  
+        <div class="plan-card bg-gray-800 rounded-2xl p-8 border border-green-600 shadow-xl hover:shadow-2xl transition-shadow duration-300 cursor-pointer flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 mb-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c1.656 0 3-1.344 3-3S13.656 2 12 2 9 3.344 9 5s1.344 3 3 3zM12 10c-3.866 0-7 3.134-7 7v3h14v-3c0-3.866-3.134-7-7-7z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 16h6" />
+          </svg>
+          <h4 class="text-2xl font-bold text-green-400 mb-2">Growth</h4>
+          <p class="text-gray-300 text-lg mb-4">₱5,000 Min • 2.5% Daily for <span class="font-semibold">60 Days</span></p>
+          <p class="text-green-300 text-md mb-6 italic">Earn daily profits for 60 days!</p>
+          <a href="/register" class="w-full bg-green-600 hover:bg-green-500 text-white font-semibold py-3 rounded-lg transition-colors duration-300 text-center">Invest Now</a>
+        </div>
+  
+        <div class="plan-card bg-gray-800 rounded-2xl p-8 border border-green-600 shadow-xl hover:shadow-2xl transition-shadow duration-300 cursor-pointer flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 mb-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c1.656 0 3-1.344 3-3S13.656 2 12 2 9 3.344 9 5s1.344 3 3 3zM12 10c-3.866 0-7 3.134-7 7v3h14v-3c0-3.866-3.134-7-7-7z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 16h6" />
+          </svg>
+          <h4 class="text-2xl font-bold text-green-400 mb-2">Elite</h4>
+          <p class="text-gray-300 text-lg mb-4">₱10,000 Min • 3% Daily for <span class="font-semibold">90 Days</span></p>
+          <p class="text-green-300 text-md mb-6 italic">Earn daily profits for 90 days!</p>
+          <a href="/register" class="w-full bg-green-600 hover:bg-green-500 text-white font-semibold py-3 rounded-lg transition-colors duration-300 text-center">Invest Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="live_stat" class="bg-gray-900 py-16" x-data>
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-extrabold text-center text-green-500 mb-12 drop-shadow-md" data-aos="fade-up">
+        Trusted by Thousands of Filipino Investors
+      </h2>
+  
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="bg-gray-800 border border-green-600 shadow-lg rounded-2xl p-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-3xl font-bold text-green-400">₱12.4M+</div>
+          <p class="text-sm text-gray-300 mt-2">Total Invested</p>
+        </div>
+  
+        <div class="bg-gray-800 border border-green-600 shadow-lg rounded-2xl p-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-3xl font-bold text-green-400">18,532</div>
+          <p class="text-sm text-gray-300 mt-2">Active Users</p>
+        </div>
+  
+        <div class="bg-gray-800 border border-green-600 shadow-lg rounded-2xl p-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="text-3xl text-green-500">
+              <svg class="text-green-400 h-8 w-8 mx-auto" viewBox="0 0 24 24" version="1.1">
+                <path d="M11.784 2.024808C11.604096 2.064048 11.451336000000001 2.15292 11.196 2.366784C10.034256000000001 3.3399120000000004 8.897736 3.979776 7.5120000000000005 4.440912C6.318912 4.837944 5.369232 4.990488 4.008 5.003688C3.413856 5.009448 3.280968 5.017176 3.181704 5.051688C2.955192 5.130456000000001 2.750064 5.297568 2.631456 5.49996C2.526792 5.67852 2.303616 6.560064000000001 2.1828000000000003 7.272C2.076696 7.897272 2.038488 8.342448 2.023704 9.12636C2.00856 9.927768 2.027112 10.314767999999999 2.114208 11.016C2.4966000000000004 14.09484 4.026984 17.008896 6.348 19.07784C7.706136 20.288448 9.278016000000001 21.1932 10.98 21.743952C11.271744 21.838344000000003 11.306184 21.844296 11.510448 21.835488C11.699304 21.827376 11.751192 21.815112 11.893656 21.744984000000002C12.10392 21.641448 12.25968 21.48516 12.36252 21.274536C12.439968 21.115872 12.443807999999999 21.095496 12.443567999999999 20.844C12.443328 20.603256000000002 12.437327999999999 20.56776 12.375408000000002 20.440944000000002C12.283608000000001 20.252928 12.075023999999999 20.0322 11.920272 19.959312C11.85192 19.927128 11.6178 19.838952000000003 11.4 19.763351999999998C8.848488 18.877752 6.756264000000001 17.128008 5.4263520000000005 14.767536C5.110776 14.207376000000002 4.74348 13.370784 4.548528 12.768C3.9780480000000003 11.00412 3.860112 8.973312 4.22784 7.246344L4.277088 7.0151520000000005 4.664544 6.998808C6.627264000000001 6.916008 8.602608 6.352488 10.38 5.368296C10.835664 5.11596 11.502312 4.682232 11.85 4.411848L12 4.295184 12.15 4.411848C12.497688 4.682232 13.164336 5.11596 13.620000000000001 5.368296C15.397896 6.352752 17.37264 6.916008 19.3368 6.998856000000001L19.725576 7.015248000000001 19.752024 7.137624000000001C20.115624 8.820072 20.042688 10.702200000000001 19.546872 12.432C19.419504 12.876287999999999 19.413216000000002 12.910944 19.422743999999998 13.116C19.430712000000003 13.287408000000001 19.446264 13.360488 19.498104 13.469952000000001C19.630776 13.750128 19.903464 13.970016 20.20536 14.040287999999999C20.620176 14.13684 21.099263999999998 13.908648000000001 21.295224 13.521192000000001C21.358128 13.3968 21.479232 13.007112 21.596424 12.552C21.976416 11.076096000000001 22.083216 9.316008 21.886968 7.763400000000001C21.782352 6.935544 21.539856 5.858592 21.387792 5.546352000000001C21.27924 5.323488 21.065136000000003 5.137512 20.818296 5.051688C20.719032000000002 5.017176 20.586144 5.009448 19.992 5.003688C19.05504 4.994592 18.47352 4.936344 17.7 4.774128C15.919512 4.400712 14.288616000000001 3.605328 12.864 2.415648C12.546528000000002 2.15052 12.382296 2.054856 12.181583999999999 2.018088C12.009552000000001 1.9865760000000001 11.955096000000001 1.987488 11.784 2.024808M20.676000000000002 16.052376000000002C20.61 16.074912 20.5074 16.127376 20.448 16.168944C20.3886 16.210512 19.589688 16.995648000000003 18.672648000000002 17.913696L17.005272 19.582848000000002 16.296648 18.87852C15.831336 18.416064000000002 15.550920000000001 18.1554 15.48 18.119448C15.067535999999999 17.910287999999998 14.614488 17.978568 14.295024 18.298008C13.986839999999999 18.606216 13.91484 19.056648000000003 14.110584000000001 19.451928C14.171424 19.574736 14.347655999999999 19.761408000000003 15.304968 20.716896C16.277928 21.688008 16.44636 21.846144 16.565448 21.900384C16.752984 21.985824 16.96824 22.016736 17.16024 21.985824C17.4906 21.932616000000003 17.398008 22.014984000000002 19.640712 19.778760000000002C20.774112 18.648648 21.74796 17.661888 21.804816 17.585952000000002C21.945240000000002 17.398392 21.993552 17.244768 21.991584 16.992C21.990408000000002 16.841832 21.975863999999998 16.750992 21.936432 16.647744C21.833856 16.379160000000002 21.561 16.120896 21.299471999999998 16.044864C21.132888 15.996456 20.828976 16.000104 20.676000000000002 16.052376000000002" stroke="none" fill="currentColor" fill-rule="evenodd" stroke-width="0.024"></path>
+              </svg>
+          </div>
+          <p class="text-sm text-gray-300 mt-2">PH Compliant & Secure</p>
+        </div>
+  
+        <div class="bg-gray-800 border border-green-600 shadow-lg rounded-2xl p-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="text-3xl font-bold text-yellow-400">★ 4.9/5</div>
+          <p class="text-sm text-gray-300 mt-2">User Satisfaction</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="trust_badges" class="bg-gray-900 py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-extrabold text-green-500 mb-10 drop-shadow-md" data-aos="fade-up">
+        Trusted Partners & Security Assurance
+      </h2>
+  
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center justify-center text-center" data-aos="fade-up" data-aos-delay="100">
+        
+        <div class="bg-gray-800 border border-green-600 p-4 rounded-xl">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/GCash_logo.svg" alt="GCash" class="h-10 mx-auto">
+          <p class="text-sm text-gray-300 mt-2">GCash</p>
+        </div>
+  
+        <div class="bg-gray-800 border border-green-600 p-4 rounded-xl">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Maya_logo.svg/120px-Maya_logo.svg.png?20220502032254" alt="Maya" class="h-10 mx-auto">
+          <p class="text-sm text-gray-300 mt-2">Maya</p>
+        </div>
+  
+
+        <div class="bg-gray-800 border border-green-600 p-4 rounded-xl">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Bybit_Logo.svg/640px-Bybit_Logo.svg.png" alt="Bybit" class="h-10 mx-auto">
+            <p class="text-sm text-gray-300 mt-2">Bybit</p>
+          </div>
+
+          <div class="bg-gray-800 border border-green-600 p-4 rounded-xl">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/New_Firebase_logo.svg/640px-New_Firebase_logo.svg.png" alt="Firebase" class="h-10 mx-auto">
+            <p class="text-sm text-gray-300 mt-2">Firebase</p>
+          </div>
+
+        <div class="bg-gray-800 border border-green-600 p-4 rounded-xl">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Digital-bitcoin-logo.png/640px-Digital-bitcoin-logo.png" alt="Bitcoin" class="h-10 mx-auto">
+          <p class="text-sm text-gray-300 mt-2">Bitcoin</p>
+        </div>
+  
+        <div class="bg-gray-800 border border-green-600 p-4 rounded-xl">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Ethereum-icon-purple.svg/640px-Ethereum-icon-purple.svg.png" alt="Ethereum" class="h-10 mx-auto">
+          <p class="text-sm text-gray-300 mt-2">Ethereum</p>
+        </div>
+  
+        <div class="bg-gray-800 border border-green-600 p-4 rounded-xl">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Tether_USDT.png/640px-Tether_USDT.png" alt="Tether" class="h-10 mx-auto">
+          <p class="text-sm text-gray-300 mt-2">Tether</p>
+        </div>
+        <div class="bg-gray-800 border border-green-600 p-4 rounded-xl">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/binance-coin-bnb-icon.png" alt="BNB crypto" class="h-10 mx-auto">
+            <p class="text-sm text-gray-300 mt-2">BNB</p>
+          </div>
+      </div>
+    </div>
+  </section>
+  
+
+<section id="how" class="py-20 bg-gray-950">
+    <div class="container mx-auto px-4 text-center max-w-5xl">
+      <h3 class="text-4xl font-bold mb-16 text-green-400" data-aos="fade-up" data-aos-duration="800">
+        How It Works
+      </h3>
+  
+      <div class="flex flex-col gap-12 md:grid md:grid-cols-3 md:gap-10 md:text-left">
+        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="600" class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-green-500/50 transition-shadow">
+          <h4 class="text-green-400 font-bold text-xl mb-3">1. Create Account</h4>
+          <p class="text-gray-300 text-base leading-relaxed">
+            Quick signup with just your mobile number and email. Start investing in minutes.
+          </p>
+        </div>
+  
+        <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="600" class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-green-500/50 transition-shadow">
+          <h4 class="text-green-400 font-bold text-xl mb-3">2. Fund Wallet</h4>
+          <p class="text-gray-300 text-base leading-relaxed">
+            Deposit securely using Maya or GCash. All transactions are encrypted and verified.
+          </p>
+        </div>
+  
+        <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="600" class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-green-500/50 transition-shadow">
+          <h4 class="text-green-400 font-bold text-xl mb-3">3. Choose Plan & Earn</h4>
+          <p class="text-gray-300 text-base leading-relaxed">
+            Select your investment plan, watch your daily ROI grow, and withdraw anytime you want.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog" class="py-20 bg-gray-950">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <h3 class="text-4xl font-bold mb-16 text-green-400 text-center" data-aos="fade-up">
+        Blog &amp; Insights
+      </h3>
+      <div class="grid gap-10 md:grid-cols-3">
+        <article class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-green-500/50 transition-shadow" data-aos="fade-up" data-aos-delay="100">
+          <h4 class="text-green-400 font-semibold text-xl mb-2">5 Smart Investment Tips for Beginners</h4>
+          <p class="text-gray-300 mb-4 leading-relaxed">
+            Starting your investment journey? Learn five essential tips to maximize your returns and minimize risks.
+          </p>
+          <div class="flex justify-between items-center text-gray-500 text-sm">
+            <time datetime="2025-06-07">June 7, 2025</time>
+            <a href="#" class="text-green-400 hover:underline font-semibold">Read More →</a>
+          </div>
+        </article>
+  
+        <article class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-green-500/50 transition-shadow" data-aos="fade-up" data-aos-delay="200">
+          <h4 class="text-green-400 font-semibold text-xl mb-2">Understanding ROI: What Every Investor Should Know</h4>
+          <p class="text-gray-300 mb-4 leading-relaxed">
+            Return on Investment (ROI) explained in simple terms so you can track your growth with confidence.
+          </p>
+          <div class="flex justify-between items-center text-gray-500 text-sm">
+            <time datetime="2025-05-30">May 30, 2025</time>
+            <a href="#" class="text-green-400 hover:underline font-semibold">Read More →</a>
+          </div>
+        </article>
+  
+        <article class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-green-500/50 transition-shadow" data-aos="fade-up" data-aos-delay="300">
+          <h4 class="text-green-400 font-semibold text-xl mb-2">Platform Update: New Features &amp; Improvements</h4>
+          <p class="text-gray-300 mb-4 leading-relaxed">
+            Discover the latest updates to our platform designed to improve your experience and security.
+          </p>
+          <div class="flex justify-between items-center text-gray-500 text-sm">
+            <time datetime="2025-05-20">May 20, 2025</time>
+            <a href="#" class="text-green-400 hover:underline font-semibold">Read More →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>  
+
+  <section id="testimonials" class="py-20 bg-gray-950">
+    <div class="container mx-auto px-4 max-w-5xl text-center">
+      <h3 class="text-4xl font-bold mb-16 text-green-400" data-aos="fade-up">Mga Sabi ng Aming mga Investors</h3>
+      <div class="grid gap-10 md:grid-cols-3">
+        
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg" data-aos="fade-up" data-aos-delay="100">
+          <div class="mx-auto mb-4 w-24 h-24 rounded-full bg-green-700 flex items-center justify-center border-4 border-green-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-green-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 20v-2a4 4 0 014-4h4a4 4 0 014 4v2" />
+            </svg>
+          </div>
+          <p class="text-gray-300 italic mb-4">"Sobrang dali gamitin, at mabilis kumita kahit maliit lang ang puhunan ko. Safe talaga dito."</p>
+          <h5 class="text-green-400 font-semibold text-lg">Maria Clara</h5>
+          <p class="text-gray-500 text-sm">Negosyante</p>
+        </div>
+        
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg" data-aos="fade-up" data-aos-delay="200">
+          <div class="mx-auto mb-4 w-24 h-24 rounded-full bg-green-700 flex items-center justify-center border-4 border-green-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-green-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 20v-2a4 4 0 014-4h4a4 4 0 014 4v2" />
+            </svg>
+          </div>
+          <p class="text-gray-300 italic mb-4">"Tiwala ako sa platform dahil transparent at secure. Walang hassle sa pag-withdraw."</p>
+          <h5 class="text-green-400 font-semibold text-lg">Juan Dela Cruz</h5>
+          <p class="text-gray-500 text-sm">Freelancer</p>
+        </div>
+        
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg" data-aos="fade-up" data-aos-delay="300">
+          <div class="mx-auto mb-4 w-24 h-24 rounded-full bg-green-700 flex items-center justify-center border-4 border-green-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-green-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 20v-2a4 4 0 014-4h4a4 4 0 014 4v2" />
+            </svg>
+          </div>
+          <p class="text-gray-300 italic mb-4">"Ang referral bonus dito ang paborito ko! Madaling kumita habang tumutubo ang investments."</p>
+          <h5 class="text-green-400 font-semibold text-lg">Ligaya Santos</h5>
+          <p class="text-gray-500 text-sm">Guro</p>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+  <section id="trust" class="py-20">
+    <div class="container mx-auto px-4 text-center max-w-5xl">
+      <h3 class="text-4xl font-bold text-green-400 mb-12" data-aos="fade-up">Why Trust Us?</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-300">
+        
+        <div data-aos="fade-up" data-aos-delay="100">
+          <div class="mb-4 flex justify-center">
+            <svg class="w-12 h-12 text-green-400" viewBox="0 0 24 24" version="1.1">
+                <path d="M11.532 2.0171520000000003C9.98184 2.17644 8.638872 2.99508 7.793544 4.296C7.448976000000001 4.826256 7.20768 5.433696 7.0743599999999995 6.106416C7.023816 6.3614880000000005 7.021224 6.44364 7.008864 8.184000000000001L6.996 9.996 6.765624000000001 10.01244C5.480904000000001 10.104096 4.417608 11.009496 4.07796 12.300912L4.021392 12.516 4.01376 15.9C4.005336000000001 19.632984 4.000224 19.486944 4.155336 19.95036C4.295496 20.369064 4.521192 20.740608 4.8354 21.069816C5.265504 21.52044 5.781264 21.803904 6.444 21.953904C6.589728 21.98688 6.934704000000001 21.993144 9.045767999999999 22.001231999999998C10.715976000000001 22.007616000000002 11.532936 22.002384 11.649768 21.984552C11.869536 21.951024 12.04548 21.861312 12.205704 21.701088C12.36024 21.546552000000002 12.449136000000001 21.373968 12.48468 21.159456000000002C12.550344 20.763216 12.367872 20.365152000000002 12.019752 20.145288C11.787144 19.99836 11.927328 20.006040000000002 9.226728 19.992456L6.753456 19.98 6.5706 19.889616C6.275232000000001 19.743624 6.082272 19.490208 6.023208 19.170768000000002C6.007224 19.084224000000003 6.00108 17.958288 6.0054 15.909312000000002L6.0120000000000005 12.780000000000001 6.063408 12.654743999999999C6.175584 12.381456 6.416615999999999 12.147168 6.680256 12.055176C6.797928000000001 12.014112 7.059311999999999 12.012 12 12.012C16.940687999999998 12.012 17.202072 12.014112 17.319744 12.055176C17.585160000000002 12.147792 17.829792 12.386664 17.93376 12.654743999999999C17.97384 12.758136000000002 17.985336 12.863760000000001 17.99964 13.26C18.011952 13.600728 18.02784 13.7688 18.054456000000002 13.839264C18.166872 14.136984000000002 18.446136000000003 14.391072000000001 18.749664 14.471808C18.940008000000002 14.522447999999999 19.234032 14.494392 19.41708 14.408112C19.620696 14.312136000000002 19.809383999999998 14.124047999999998 19.90548 13.921224L19.98 13.764000000000001 19.979400000000002 13.152000000000001C19.978848 12.590688 19.97412 12.521232 19.922304 12.313344C19.601568 11.026608 18.524352 10.10448 17.234376 10.01244L17.004 9.996 16.990992 8.184000000000001C16.976448 6.158256 16.978632 6.186599999999999 16.788743999999998 5.56008C16.225968 3.7034640000000003 14.656991999999999 2.343432 12.743544 2.0535840000000003C12.430344000000002 2.00616 11.818224 1.987752 11.532 2.0171520000000003M11.506488000000001 4.045416C10.190856 4.266576 9.170544 5.348832 9.025464 6.6770640000000006C9.010176 6.816864 9 7.529808000000001 9 8.459064L9 10.008000000000001 12 10.008000000000001L15 10.008000000000001 15 8.459064C15 6.9136560000000005 14.987160000000001 6.595512 14.912904 6.3C14.616408000000002 5.120232 13.660464000000001 4.236624 12.472128000000001 4.043904C12.205128 4.000584 11.769048 4.00128 11.506488000000001 4.045416M11.724 14.01684C10.90056 14.14332 10.244784 14.741520000000001 10.054295999999999 15.540000000000001C9.98544 15.828624 9.997463999999999 16.313928 10.079880000000001 16.572C10.285968 17.217503999999998 10.757064 17.694696 11.4 17.909208C11.616864 17.981568 11.646192 17.985288 12 17.985288C12.353807999999999 17.985288 12.383136000000002 17.981568 12.6 17.909208C13.248240000000001 17.69292 13.71744 17.214456000000002 13.923072000000001 16.56C13.972392 16.40304 13.979568 16.332384 13.979304 16.008C13.978944 15.582 13.95072 15.444503999999998 13.798608 15.127824C13.484952000000002 14.474784 12.825672 14.042448 12.087311999999999 14.005656C11.966688000000001 13.999656 11.8032 14.004672000000001 11.724 14.01684M20.676000000000002 16.052376000000002C20.61 16.074912 20.5074 16.127376 20.448 16.168944C20.3886 16.210512 19.589688 16.995648000000003 18.672648000000002 17.913696L17.005272 19.582848000000002 16.296648 18.87852C15.831336 18.416064000000002 15.550920000000001 18.1554 15.48 18.119448C15.067535999999999 17.910287999999998 14.614488 17.978568 14.295024 18.298008C13.986839999999999 18.606216 13.91484 19.056648000000003 14.110584000000001 19.451928C14.171424 19.574736 14.347655999999999 19.761408000000003 15.304968 20.716896C16.277928 21.688008 16.44636 21.846144 16.565448 21.900384C16.752984 21.985824 16.96824 22.016736 17.16024 21.985824C17.4906 21.932616000000003 17.398008 22.014984000000002 19.640712 19.778760000000002C20.774112 18.648648 21.74796 17.661888 21.804816 17.585952000000002C21.945240000000002 17.398392 21.993552 17.244768 21.991584 16.992C21.990408000000002 16.841832 21.975863999999998 16.750992 21.936432 16.647744C21.833856 16.379160000000002 21.561 16.120896 21.299471999999998 16.044864C21.132888 15.996456 20.828976 16.000104 20.676000000000002 16.052376000000002" stroke="none" fill="currentColor" fill-rule="evenodd" stroke-width="0.024"></path>
+              </svg>
+          </div>
+          <h4 class="text-xl font-semibold mb-2">Secure & Encrypted</h4>
+          <p>We use bank-level encryption and strict data protection protocols.</p>
+        </div>
+  
+        <div data-aos="fade-up" data-aos-delay="200">
+          <div class="mb-4 flex justify-center">
+            <svg class="w-12 h-12 text-green-400" viewBox="0 0 24 24" version="1.1">
+                <path d="M11.532 2.0171520000000003C9.206783999999999 2.256072 7.37856 4.00356 7.046712 6.304368C6.996336 6.653568000000001 6.995640000000001 7.325808 7.045296 7.6817519999999995C7.19748 8.772912 7.692096 9.764280000000001 8.469576 10.536552C9.235392 11.297208 10.126104 11.752848 11.221032000000001 11.944056C11.557512 12.002808 12.442488 12.002808 12.778968 11.944056C13.631712000000002 11.795136 14.348784 11.489304 15.012 10.99164C16.091064 10.181952 16.80324 8.939808000000001 16.96944 7.577592C17.011752 7.2306479999999995 16.98672 6.4437120000000006 16.922496000000002 6.1030560000000005C16.524168 3.99 14.856048 2.373576 12.743544 2.0535840000000003C12.430344000000002 2.00616 11.818224 1.987752 11.532 2.0171520000000003M11.506488000000001 4.045416C10.92432 4.143288 10.371672 4.421664 9.938184 4.8354C9.268728 5.4743520000000006 8.931792 6.370824000000001 9.022128 7.272792000000001C9.12612 8.311176 9.7134 9.184248 10.624344 9.654744C11.338583999999999 10.023624 12.190824000000001 10.090944 12.945599999999999 9.838056C14.537640000000001 9.30468 15.381576 7.569768 14.817456 5.990064C14.454072000000002 4.972536 13.544592 4.217832 12.472128000000001 4.043904C12.205128 4.000584 11.769048 4.00128 11.506488000000001 4.045416M9.516 14.019120000000001C8.740848 14.093160000000001 7.90896 14.389032 7.245576 14.826648C5.978016 15.662808 5.158848 17.032632 5.0177760000000005 18.552C4.984416 18.911568 4.984224 20.961552 5.017536 21.168C5.031408 21.253800000000002 5.071512 21.381 5.106696 21.450648C5.18856 21.612696 5.387256 21.811392 5.549352000000001 21.893328C5.8157760000000005 22.027992 6.18456 22.027824000000003 6.45144 21.89292C6.670007999999999 21.782448 6.886871999999999 21.52824 6.963144 21.293088C6.983352000000001 21.230808 6.9969600000000005 20.806944 7.008408 19.884C7.026216000000001 18.448176 7.027032 18.43884 7.1766 18.006672000000002C7.467143999999999 17.166984000000003 8.166984 16.467144 9.006672 16.1766C9.469128000000001 16.016568 9.331992000000001 16.024512 11.892 16.009584C14.201016 15.99612 14.221032000000001 15.995591999999998 14.345256000000001 15.944591999999998C14.920848 15.708336000000001 15.16224 15.071832000000002 14.883216000000001 14.526072000000001C14.810064 14.383008 14.596656 14.177544000000001 14.4432 14.102471999999999C14.371896 14.067576 14.249304 14.028528000000001 14.170776 14.015664C13.993896 13.986696 9.823008 13.989792000000001 9.516 14.019120000000001M20.676000000000002 16.052376000000002C20.61 16.074912 20.5074 16.127376 20.448 16.168944C20.3886 16.210512 19.589688 16.995648000000003 18.672648000000002 17.913696L17.005272 19.582848000000002 16.296648 18.87852C15.831336 18.416064000000002 15.550920000000001 18.1554 15.48 18.119448C15.067535999999999 17.910287999999998 14.614488 17.978568 14.295024 18.298008C13.986839999999999 18.606216 13.91484 19.056648000000003 14.110584000000001 19.451928C14.171424 19.574736 14.347655999999999 19.761408000000003 15.304968 20.716896C16.277928 21.688008 16.44636 21.846144 16.565448 21.900384C16.752984 21.985824 16.96824 22.016736 17.16024 21.985824C17.4906 21.932616000000003 17.398008 22.014984000000002 19.640712 19.778760000000002C20.774112 18.648648 21.74796 17.661888 21.804816 17.585952000000002C21.945240000000002 17.398392 21.993552 17.244768 21.991584 16.992C21.990408000000002 16.841832 21.975863999999998 16.750992 21.936432 16.647744C21.833856 16.379160000000002 21.561 16.120896 21.299471999999998 16.044864C21.132888 15.996456 20.828976 16.000104 20.676000000000002 16.052376000000002" stroke="none" fill="currentColor" fill-rule="evenodd" stroke-width="0.024"></path>
+              </svg>
+          </div>
+          <h4 class="text-xl font-semibold mb-2">Trusted by Filipinos</h4>
+          <p>Thousands of kababayans use and recommend our investment platform daily.</p>
+        </div>
+  
+        <div data-aos="fade-up" data-aos-delay="300">
+          <div class="mb-4 flex justify-center">
+            <svg class="w-12 h-12 text-green-400" viewBox="0 0 24 24" version="1.1">
+                <path d="M7.814256 5.016312C7.5096240000000005 5.0700959999999995 7.571712 5.013864 5.2779359999999995 7.312992C3.276984 9.3186 3.147984 9.452976000000001 3.0855119999999996 9.596424C2.94132 9.927504 2.986416 10.314696 3.2023440000000005 10.599552000000001C3.3684 10.8186 7.362264000000001 14.791824 7.488 14.863056C7.774007999999999 15.025056 8.124528 15.042048 8.411352 14.90784C8.953368000000001 14.654184 9.157968 14.009447999999999 8.861808 13.488312C8.824176 13.42212 8.14404 12.722112 7.112640000000001 11.688048L5.425008 9.996072 7.125936 8.292048000000001C8.33016 7.085592 8.84268 6.556463999999999 8.88108 6.48C9.114288 6.015624000000001 8.993976 5.49108 8.585472000000001 5.1912C8.373696 5.0357520000000005 8.080608 4.969272 7.814256 5.016312M12.807599999999999 5.01612C12.511488 5.068512 12.577392 5.008872 10.291032 7.2930719999999996C7.967904 9.613992000000001 8.074463999999999 9.494976000000001 8.010168 9.840696C7.974384000000001 10.033152 8.015016000000001 10.278431999999999 8.113224 10.462656C8.171208 10.571448 8.6028 11.014584 10.314672 12.723047999999999C12.319032 14.723400000000002 12.452952000000002 14.851992 12.596424 14.914488C13.093344000000002 15.130896 13.659984000000001 14.918904 13.902888 14.425728000000001C13.975584000000001 14.278128 13.98 14.253936 13.98 14.004576C13.98 13.54812 14.045544 13.635048 12.625728 12.208728L11.412 10.989456 13.872 10.999104C16.583568 11.00976 16.49064 11.004816 16.956 11.163984000000001C17.83812 11.465688 18.534456000000002 12.162048 18.835992 13.044C18.940224 13.348848 18.985272000000002 13.639560000000001 18.98544 14.008296C18.986112 15.42396 18.018864 16.613904 16.608 16.933056C16.46928 16.964448 16.240824 16.977912 15.612 16.991784C15.108623999999999 17.002872 14.761872 17.020488 14.706912 17.037768C14.474568 17.110752 14.217863999999999 17.329344000000003 14.10708 17.548560000000002C13.972176 17.81544 13.972008 18.184224 14.106672000000001 18.450648C14.188584 18.612696 14.387208 18.811344000000002 14.549544000000001 18.893544C14.754696000000001 18.997416 14.953776 19.015032 15.768 19.001256C16.543392 18.988176 16.763952 18.965304 17.217192 18.850968C18.873912 18.433056 20.217216 17.18532 20.74584 15.57336C21.339312 13.763664 20.87508 11.805408 19.534824 10.465176C18.805848 9.7362 17.921015999999998 9.273696 16.86 9.067032000000001C16.602096 9.0168 16.536168 9.015408 14.005416 9.006696L11.414856 8.997792 12.615839999999999 7.792896000000001C13.276392 7.130208 13.840224000000001 6.548640000000001 13.868808 6.500544C13.991712000000001 6.293688 14.02848 5.952864 13.955136000000001 5.700528C13.880328 5.443272 13.619591999999999 5.16468 13.364136000000002 5.069112C13.209312 5.011176 12.966287999999999 4.988040000000001 12.807599999999999 5.01612" stroke="none" fill="currentColor" fill-rule="evenodd" stroke-width="0.024"></path>
+              </svg>
+          </div>
+          <h4 class="text-xl font-semibold mb-2">7-Day Money-Back</h4>
+          <p>Try risk-free. If you're not happy, request a full refund within 7 days.</p>
+        </div>
+  
+      </div>
+    </div>
+  </section>  
+
+  <section id="features" class="py-20 bg-gray-950">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-4xl font-bold mb-16 text-green-400 text-4xl font-bold mb-16 text-green-400" data-aos="fade-up">
+        Why Choose Us
+      </h3>
+      <div class="grid gap-12 md:grid-cols-3 text-left">
+        
+        <div class="p-6 bg-gray-800 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
+          <h4 class="text-green-400 font-bold text-xl mb-2">Secure Transactions</h4>
+          <p class="text-gray-300">Bank-grade encryption ensures your funds and data are always protected.</p>
+        </div>
+        
+        <div class="p-6 bg-gray-800 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+          <h4 class="text-green-400 font-bold text-xl mb-2">Instant Deposits & Withdrawals</h4>
+          <p class="text-gray-300">Fast and hassle-free funding and cashout via Maya and GCash wallets.</p>
+        </div>
+        
+        <div class="p-6 bg-gray-800 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="300">
+          <h4 class="text-green-400 font-bold text-xl mb-2">Flexible Investment Plans</h4>
+          <p class="text-gray-300">Choose from multiple plans tailored for different goals and risk appetites.</p>
+        </div>
+  
+        <div class="p-6 bg-gray-800 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="400">
+          <h4 class="text-green-400 font-bold text-xl mb-2">Daily ROI Tracking</h4>
+          <p class="text-gray-300">Real-time updates let you monitor your earnings as they grow.</p>
+        </div>
+  
+        <div class="p-6 bg-gray-800 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="500">
+          <h4 class="text-green-400 font-bold text-xl mb-2">Referral Bonuses</h4>
+          <p class="text-gray-300">Earn rewards when your friends invest through your referral link.</p>
+        </div>
+  
+        <div class="p-6 bg-gray-800 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="600">
+          <h4 class="text-green-400 font-bold text-xl mb-2">24/7 Customer Support</h4>
+          <p class="text-gray-300">Our team is ready to help you anytime via chat or email.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="offers" class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4 max-w-5xl text-center">
+      <h3 class="text-4xl font-bold mb-8 text-green-400" data-aos="fade-up">Limited Time Bonuses</h3>
+      <p class="text-gray-300 mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        Don’t miss out! Get extra rewards for new signups and first-time investors. These promos won't last forever.
+      </p>
+      <div class="bg-green-600 text-white font-semibold py-4 px-6 rounded-lg shadow-md inline-block animate-pulse" data-aos="zoom-in" data-aos-delay="200">
+        🎁 First 100 signups get ₱100 bonus credit!
+      </div>
+    </div>
+  </section>  
+
+  <section id="community" class="py-20 text-gray-200">
+    <div class="container mx-auto px-4 max-w-4xl text-center">
+      <h3 class="text-4xl font-bold text-green-400 mb-6" data-aos="fade-up">
+        Join the Community
+      </h3>
+      <p class="mb-8" data-aos="fade-up" data-aos-delay="100">
+        Connect with other investors, ask questions, and share your journey.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-4" data-aos="fade-up" data-aos-delay="200">
+        
+        <a href="#" class="flex items-center gap-2 px-6 py-3 bg-green-500 text-white rounded-xl hover:bg-green-600 transition w-full sm:w-auto justify-center">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" version="1.1">
+                <path d="M5.448 3.0390240000000004C4.609536 3.1524 3.8061119999999997 3.5487360000000003 3.1998960000000003 4.148064000000001C2.56644 4.77432 2.165352 5.565408 2.035848 6.444C1.989432 6.7587600000000005 1.9889759999999999 15.250296 2.035344 15.552C2.305968 17.312832 3.6120959999999998 18.646272 5.364 18.950232C5.509824 18.975552 5.811672 18.992088 6.293112000000001 19.001160000000002L7.006224 19.0146 7.0131120000000005 20.145288L7.0200000000000005 21.276 7.087728 21.413952000000002C7.3180559999999995 21.883152 7.854792000000001 22.116168 8.32272 21.950088C8.379216000000001 21.930024 9.513936 21.260472 10.844352 20.462184L13.263264 19.01076 15.853632 19.000824C18.653856 18.990096 18.537936 18.995304 19.056 18.856776C20.224464 18.54432 21.235368 17.65164 21.697728 16.524C21.808752 16.253232 21.918048 15.855264 21.964655999999998 15.552C22.011264 15.24864 22.010544 6.75768 21.963863999999997 6.444C21.722784 4.82376 20.584608 3.555 18.984 3.122256C18.517608 2.996136 18.731856 2.9998080000000003 11.968776 3.002472C6.698328 3.004536 5.659872 3.010368 5.448 3.0390240000000004M5.78664 5.01768C5.299272 5.065320000000001 4.9086240000000005 5.263008 4.54464 5.646192C4.334592 5.8673280000000005 4.203048 6.0852 4.0992239999999995 6.384L4.0200000000000005 6.612 4.0200000000000005 10.98L4.0200000000000005 15.348 4.07424 15.535176C4.267824 16.203048 4.782888 16.722144 5.452104 16.923792000000002C5.621184 16.97472 5.67828 16.977336 6.924 16.99104C8.170512 17.004744 8.224776 17.00724 8.345256000000001 17.056056C8.633136 17.172743999999998 8.857848 17.407728 8.95968 17.698608C8.97444 17.740776 8.991048000000001 18.080904 8.99868 18.498024L9.012 19.224048 10.776 18.164424C11.7462 17.581632 12.594 17.08212 12.66 17.0544C12.778968 17.004432 12.804072000000001 17.00388 15.576 16.991376000000002L18.372 16.978776 18.547895999999998 16.924775999999998C19.22124 16.718064000000002 19.732295999999998 16.202688 19.92576 15.535176L19.98 15.348 19.98 10.98L19.98 6.612 19.900776 6.384C19.78416 6.048408 19.660415999999998 5.855016 19.39404 5.5920000000000005C19.085040000000003 5.286912 18.833208 5.143128 18.436464 5.04528C18.289704 5.009064 17.751360000000002 5.005368 12.132 5.00184C8.7528 4.999728 5.8973759999999995 5.006856 5.78664 5.01768M9.312 8.01924C9.127848 8.049432 8.944992000000001 8.148216 8.794296 8.298912C8.40264 8.690592 8.40264 9.309408 8.794296 9.701088C8.957832 9.8646 9.131688 9.951960000000001 9.36 9.98532C10.157232 10.101744 10.74804 9.30072 10.409808 8.561928C10.342032 8.41392 10.159968 8.221368 9.998112 8.126496C9.887784 8.06184 9.61968 7.990608 9.504 7.995216C9.471 7.996536000000001 9.384599999999999 8.00736 9.312 8.01924M14.318256000000002 8.016312C13.915895999999998 8.087352000000001 13.569672 8.448 13.511976 8.856192C13.401167999999998 9.640104000000001 14.215824000000001 10.239816 14.93544 9.904104C15.176952000000002 9.791424000000001 15.393024 9.543984 15.469248 9.2928C15.514224000000002 9.144552000000001 15.513264 8.858592 15.467256 8.703696C15.389232 8.44104 15.131927999999998 8.1648 14.876136000000002 8.069112C14.720903999999999 8.011032 14.47824 7.9880640000000005 14.318256000000002 8.016312M9.257904 12.026064C9.103223999999999 12.062520000000001 8.925144 12.167736 8.790887999999999 12.301992C8.483856000000001 12.609 8.415023999999999 13.083288 8.62128 13.470287999999998C8.760888 13.732224000000002 9.292200000000001 14.187144 9.798 14.477784C11.110128000000001 15.231816 12.889872 15.231816 14.202 14.477784C14.7078 14.187144 15.239111999999999 13.732224000000002 15.37872 13.470287999999998C15.718272 12.833207999999999 15.2892 12.055728 14.570904 12.006504000000001C14.236224000000002 11.98356 14.02512 12.075432 13.677384 12.395351999999999C12.74532 13.252872 11.25468 13.252872 10.322616 12.395351999999999C10.094976 12.185928 9.964584 12.099336000000001 9.800495999999999 12.048672000000002C9.635544 11.99772 9.416832 11.9886 9.257904 12.026064" stroke="none" fill="currentColor" fill-rule="evenodd" stroke-width="0.024"></path>
+              </svg>
+          <span>Live Chat</span>
+        </a>
+  
+        <a href="#" class="flex items-center gap-2 px-6 py-3 bg-blue-500 text-white rounded-xl hover:bg-blue-600 transition w-full sm:w-auto justify-center">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" version="1.1">
+                <path d="M10.716000000000001 2.017848C10.494672000000001 2.0493840000000003 10.197408 2.153832 10.003488 2.268168C9.645936 2.478984 9.395496 2.746368 9.216864000000001 3.108C8.995128000000001 3.556896 9.014496 3.207576 9.006 6.912C8.999256 9.844128000000001 9.00252 10.20816 9.037008 10.38C9.198432 11.183904 9.809520000000001 11.797368 10.612992 11.96208C10.776456 11.995584 11.192376 12 14.188344 12L17.578704000000002 12 18.995352 13.413336000000001C19.988112 14.403792000000001 20.444304 14.842944000000001 20.52 14.881008000000001C20.934432 15.089447999999999 21.38568 15.021287999999998 21.704976000000002 14.701991999999999C21.860088 14.54688 21.953712000000003 14.365344000000002 21.985728 14.157672000000002C22.00092 14.059056 22.006944 12.15504 22.002528 8.844C21.996072 4.01376 21.992952000000002 3.6748079999999996 21.953664 3.54C21.727728 2.7649440000000003 21.238368 2.2757519999999998 20.46 2.046816C20.324736 2.0070240000000004 20.029392 2.0042400000000002 15.588000000000001 2.000904C12.9876 1.998936 10.795200000000001 2.006568 10.716000000000001 2.017848M10.997904 7.002L11.004 9.996 14.628 10.008000000000001C18.5412 10.02096 18.295464000000003 10.0122 18.516000000000002 10.14648C18.568800000000003 10.17864 18.922512 10.514256 19.302 10.892304000000001L19.992 11.579688 19.992 7.793856000000001L19.992 4.008 15.491904 4.008L10.991808 4.008 10.997904 7.002M3.708 9.017159999999999C3.403536 9.059256 2.956968 9.258912 2.729064 9.454848C2.3334960000000002 9.794880000000001 2.08452 10.243104 2.0175359999999998 10.735728C1.984008 10.982304000000001 1.981968 20.949096 2.015424 21.153288C2.1055200000000003 21.703464 2.612736 22.070568 3.162 21.983136000000002C3.489 21.931079999999998 3.461712 21.95424 5.00436 20.418912000000002L6.420744 19.009272 9.86436 19.002432000000002C13.3008 18.995616000000002 13.308384 18.995496000000003 13.488 18.944232C14.101128000000001 18.769296 14.564112 18.379512000000002 14.821392 17.821632C14.986368 17.463888 14.983656 17.490312 14.994264 16.14C15.004512 14.834904 14.999400000000001 14.757287999999999 14.888856 14.53824C14.857272 14.475672000000001 14.773248 14.366304 14.702160000000001 14.295192000000002C14.247959999999999 13.841016 13.503 13.925016 13.153368 14.469864C13.010904 14.691863999999999 13.008552000000002 14.715288 13.008263999999999 15.906L13.008000000000001 16.992 9.498 16.992144C7.359576000000001 16.992216 5.932799999999999 17.001312000000002 5.846712 17.015424C5.529984 17.067287999999998 5.45712 17.121792 4.701192000000001 17.872439999999997L4.008 18.560784 4.008 14.776392L4.008 10.992 5.094 10.991736C6.286392 10.991448 6.307848 10.989264 6.532344 10.845216C6.960864 10.570224 7.119576 10.010616 6.897648 9.557039999999999C6.822456 9.403368 6.617088 9.189984 6.473928000000001 9.116783999999999C6.253463999999999 9.00408 6.203568000000001 9.00036 4.956 9.003888C4.309200000000001 9.005712 3.7476000000000003 9.011664 3.708 9.017159999999999" stroke="none" fill="currentColor" fill-rule="evenodd" stroke-width="0.024"></path>
+            </svg>
+          <span>Investor Forum</span>
+        </a>
+  
+        <a href="#" class="flex items-center gap-2 px-6 py-3 bg-purple-500 text-white rounded-xl hover:bg-purple-600 transition w-full sm:w-auto justify-center">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" version="1.1">
+            <path d="M20.736 3.0349440000000003C20.638656 3.062568 3.1852080000000003 9.84468 2.68116 10.050744C2.304192 10.204848 2.077776 10.474248000000001 2.012424 10.846392C1.960512 11.142168 2.068344 11.471976000000002 2.2918800000000004 11.700936C2.405952 11.817768 2.550504 11.894712 4.298736 12.769152L6.18264 13.711464000000001 7.126272 16.545744C7.645272 18.104592 8.097816 19.432272 8.13192 19.496136000000003C8.210280000000001 19.642824 8.409888 19.826472 8.576784 19.905432C8.929464 20.072280000000003 9.359544 20.01144 9.65292 19.753224000000003C9.711744 19.701432 10.287336 18.955704 10.931976 18.096024L12.104088 16.532976 14.242056 18.66744C15.569832000000002 19.993056 16.420920000000002 20.825088 16.488 20.863056C16.981632 21.142584000000003 17.614584 20.966352 17.87556 20.476704C17.935632 20.363976 18.326784 18.828816 19.96632 12.270719999999999C21.0756 7.833672000000001 21.99012 4.144368 21.998592 4.072223999999999C22.035936 3.754536 21.835224 3.343296 21.556968 3.167376C21.317520000000002 3.0160080000000002 20.989296 2.963064 20.736 3.0349440000000003M12.611591999999998 8.336640000000001C8.809752 9.816888 5.650752000000001 11.047583999999999 5.591592 11.071512L5.484 11.115024 6.507168 11.628672C7.599431999999999 12.177048000000001 7.722816 12.255744 7.861752 12.49284C7.894776 12.549168 8.239656 13.548216 8.628168 14.712912000000001C9.01668 15.877608 9.339432 16.835424 9.345408 16.8414C9.356736 16.852728 10.656 15.132 10.656 15.105696C10.656 15.097439999999999 10.54848 14.978064 10.417056 14.840424C10.248504 14.66388 10.154808000000001 14.542848000000001 10.099056 14.429640000000001C10.024128000000001 14.277552 10.02 14.25528 10.02 14.004576C10.02 13.755384 10.024608 13.730231999999999 10.099032000000001 13.572000000000001C10.174344 13.411895999999999 10.277448 13.304664 12.295032 11.288400000000001C13.812648000000001 9.771744 14.442576 9.157488 14.52 9.118728C14.935656 8.91072 15.385776 8.978808 15.704976 9.298008C16.007160000000002 9.600216000000001 16.082064 10.035960000000001 15.900336000000001 10.434552C15.845208 10.555488 15.632352 10.777536000000001 14.129040000000002 12.282192L12.420408000000002 13.992384 14.438616000000001 16.010568L16.4568 18.028776 18.005424 11.834376C18.857136 8.42748 19.547256 5.641176000000001 19.539 5.64264C19.530744 5.64408 16.413408 6.856368000000001 12.611591999999998 8.336640000000001" stroke="none" fill="currentColor" fill-rule="evenodd" stroke-width="0.024"></path>
+          </svg>
+          <span>Social Links</span>
+        </a>
+  
+      </div>
+    </div>
+  </section>
+  
+  <section id="legal" class="py-20 text-gray-200">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h3 class="text-4xl font-bold text-green-400 mb-8 text-center" data-aos="fade-up">Legal & Transparency</h3>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        
+        <div data-aos="fade-up" data-aos-delay="100">
+          <h4 class="text-2xl font-semibold mb-2">Terms & Conditions Summary</h4>
+          <ul class="list-disc list-inside text-gray-400">
+            <li>Investments carry financial risk</li>
+            <li>Users must be 18 or older</li>
+            <li>Withdrawals processed within 24 hours</li>
+            <li>Referral bonuses require successful investment</li>
+          </ul>
+          <a href="/terms" class="mt-3 inline-block text-green-400 hover:underline">Read full Terms</a>
+        </div>
+  
+        <div data-aos="fade-up" data-aos-delay="200">
+          <h4 class="text-2xl font-semibold mb-2">Privacy Policy Highlights</h4>
+          <ul class="list-disc list-inside text-gray-400">
+            <li>We collect only necessary data (email, IP, phone)</li>
+            <li>Data is encrypted & stored securely</li>
+            <li>We never sell your personal info</li>
+            <li>You can request data deletion anytime</li>
+          </ul>
+          <a href="/privacy" class="mt-3 inline-block text-green-400 hover:underline">View Privacy Policy</a>
+        </div>
+  
+      </div>
+    </div>
+  </section>  
+
+  <section id="register" class="bg-gray-950 py-10">
+    <div class="container mx-auto text-center">
+      <h4 class="text-xl font-bold text-white mb-4" data-aos="fade-up">Ready to grow your money?</h4>
+      <div class="flex justify-center gap-4" data-aos="fade-up" data-aos-delay="100">
+        <a href="/register" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition">
+          Create Account
+        </a>
+        <a href="/deposit" class="bg-white hover:bg-gray-100 text-green-600 font-semibold py-3 px-6 rounded-lg transition">
+          Fund Wallet
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="mobile_app" class="py-16 px-4 text-center max-w-2xl mx-auto" data-aos="fade-up">
+    <h2 class="text-3xl font-extrabold text-green-500 mb-6 drop-shadow-md">
+      Get Our Mobile App
+    </h2>
+    <p class="text-gray-300 mb-4 max-w-xl mx-auto">
+      Manage your investments on the go. Download our app from Google Play or stay tuned for iOS release.
+    </p>
+    <p class="text-gray-500 italic mb-10 max-w-xl mx-auto text-sm">
+      *Note: App support is not available yet but coming soon!
+    </p>
+  
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-8">
+      <a href="https://play.google.com/store/apps/details?id=your.app.id" target="_blank" rel="noopener" aria-label="Download on Google Play" class="inline-block opacity-50 cursor-not-allowed pointer-events-none">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Download on Google Play" class="h-14">
+      </a>
+  
+      <div class="flex flex-col items-center text-gray-400 text-lg italic">
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+             alt="Coming Soon on the App Store"
+             class="h-14 opacity-50">
+      </div>      
+    </div>
+  
+    <div class="mt-12">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://play.google.com/store/apps/details?id=your.app.id" 
+               alt="QR code to download Android app" 
+               class="mx-auto h-32 w-32 opacity-50">
+      </div>
+  </section>
+    
+  {% endblock %}
+
+  {% block scripts %}
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+</script>  
+{% endblock %}

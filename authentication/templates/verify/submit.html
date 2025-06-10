@@ -1,0 +1,171 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Submit KYC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-900 text-white min-h-screen p-6">
+  <div class="max-w-xl mx-auto bg-gray-800 p-6 rounded-lg shadow-lg mt-10" x-data="kycForm()" data-aos="fade-up">
+    <h1 class="text-3xl font-bold text-green-400 mb-6 text-center" data-aos="fade-down">Submit Your KYC</h1>
+
+    <form method="POST" enctype="multipart/form-data" class="space-y-6" @submit.prevent="validateForm">
+      {% csrf_token %}
+
+      <!-- Avatar Upload -->
+      <div data-aos="fade-up">
+        <label class="block mb-1">Avatar (optional)</label>
+        <input type="file" name="avatar" accept="image/*"
+               @change="checkFileSize($event)"
+               class="w-full p-2 rounded bg-gray-700 text-white border border-gray-600">
+        <p class="text-sm text-gray-400 mt-1">Max size: 1MB. Accepts JPG, PNG.</p>
+        <template x-if="avatarError">
+          <p class="text-red-400 text-sm mt-1" x-text="avatarError"></p>
+        </template>
+      </div>
+
+      <!-- First Name -->
+      <div data-aos="fade-up">
+        <label class="block mb-1">First Name</label>
+        <input type="text" name="first_name" required
+               class="w-full p-2 rounded bg-gray-700 text-white border border-gray-600">
+      </div>
+
+      <!-- Last Name -->
+      <div data-aos="fade-up">
+        <label class="block mb-1">Last Name</label>
+        <input type="text" name="last_name" required
+               class="w-full p-2 rounded bg-gray-700 text-white border border-gray-600">
+      </div>
+
+      <!-- Phone Number + Availability -->
+      <div data-aos="fade-up">
+        <label class="block mb-1">Phone Number</label>
+        <input type="text" name="phone" x-model="phone"
+               @input="phone = phone.replace(/\D/g, '').slice(0, 11); checkPhoneAvailability()"
+               maxlength="11" required
+               class="w-full p-2 rounded bg-gray-700 text-white border border-gray-600"
+               placeholder="09XXXXXXXXX">
+        <template x-if="phone.length === 11">
+          <p class="text-sm mt-1"
+             :class="isPhoneAvailable === true ? 'text-green-400' : isPhoneAvailable === false ? 'text-red-400' : 'text-gray-400'">
+            <span x-show="isPhoneAvailable === true">✅ Phone number is available</span>
+            <span x-show="isPhoneAvailable === false">❌ Phone number already taken</span>
+            <span x-show="isPhoneAvailable === null">Checking availability...</span>
+          </p>
+        </template>
+      </div>
+
+      <!-- Payment Method -->
+      <div class="space-y-4" data-aos="fade-up">
+        <div>
+          <label class="block mb-1">Preferred Payment Method</label>
+          <select name="preferred_payment" x-model="payment" required
+                  class="w-full p-2 rounded bg-gray-700 text-white border border-gray-600">
+            <option disabled value="">Select</option>
+            <option value="gcash">GCash</option>
+            <option value="maya">Maya</option>
+          </select>
+        </div>
+
+        <div x-show="payment === 'gcash'" x-transition>
+          <label class="block mb-1">GCash Number</label>
+          <input type="text" name="gcash_number" x-model="gcash"
+                 @input="gcash = gcash.replace(/\D/g, '').slice(0, 11)"
+                 maxlength="11"
+                 class="w-full p-2 rounded bg-gray-700 text-white border border-gray-600"
+                 placeholder="09XXXXXXXXX">
+        </div>
+
+        <div x-show="payment === 'maya'" x-transition>
+          <label class="block mb-1">Maya Number</label>
+          <input type="text" name="maya_number" x-model="maya"
+                 @input="maya = maya.replace(/\D/g, '').slice(0, 11)"
+                 maxlength="11"
+                 class="w-full p-2 rounded bg-gray-700 text-white border border-gray-600"
+                 placeholder="09XXXXXXXXX">
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit"
+              class="w-full bg-green-500 hover:bg-green-600 p-3 rounded font-semibold transition duration-300"
+              data-aos="zoom-in">
+        Submit
+      </button>
+    </form>
+  </div>
+
+  <!-- Alpine Component -->
+  <script>
+    function kycForm() {
+      return {
+        phone: '',
+        isPhoneAvailable: null,
+        avatarError: '',
+        payment: '',
+        gcash: '',
+        maya: '',
+
+        checkFileSize(e) {
+          const file = e.target.files[0];
+          if (file && file.size > 1048576) {
+            this.avatarError = "File size exceeds 1MB.";
+            e.target.value = "";
+          } else {
+            this.avatarError = "";
+          }
+        },
+
+        checkPhoneAvailability() {
+          if (this.phone.length !== 11) {
+            this.isPhoneAvailable = null;
+            return;
+          }
+          this.isPhoneAvailable = null;
+          fetch(`/auth/check-phone/?phone=${this.phone}`)
+            .then(res => res.json())
+            .then(data => {
+              this.isPhoneAvailable = data.available;
+            });
+        },
+
+        validateForm() {
+          if (this.avatarError) return;
+
+          if (!this.payment) {
+            alert("Please select a payment method.");
+            return;
+          }
+
+          if (this.payment === 'gcash' && (!this.gcash || this.gcash.length < 11)) {
+            alert("Please enter a valid GCash number.");
+            return;
+          }
+
+          if (this.payment === 'maya' && (!this.maya || this.maya.length < 11)) {
+            alert("Please enter a valid Maya number.");
+            return;
+          }
+
+          if (this.isPhoneAvailable === false) {
+            alert("This phone number is already taken.");
+            return;
+          }
+
+          document.querySelector("form").submit();
+        }
+      }
+    }
+  </script>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true });
+  </script>
+</body>
+</html>

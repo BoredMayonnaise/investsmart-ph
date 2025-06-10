@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account Verification</title>
+
+  <!-- Tailwind config and CSS -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animation -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  {% if messages %}
+  <meta http-equiv="refresh" content="50">
+{% endif %}
+
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex items-center justify-center p-6">
+  <div class="w-full max-w-xl bg-gray-800 p-8 rounded-xl shadow-lg" data-aos="fade-up">
+    <h1 class="text-3xl font-bold text-green-400 mb-4 text-center">Account Verification</h1>
+    <p class="text-gray-300 text-center mb-6">
+      Complete the following steps to fully verify your account.
+    </p>
+
+    <ul class="space-y-4">
+      <li class="flex items-center justify-between">
+        <span>Email Confirmation</span>
+        {% if profile.email_confirmed %}
+          <span class="px-3 py-1 bg-green-600 rounded-full text-sm">Verified</span>
+        {% else %}
+          <span class="px-3 py-1 bg-red-600 rounded-full text-sm">Pending</span>
+        {% endif %}
+      </li>
+      <li class="flex items-center justify-between">
+        <span>Phone Confirmation</span>
+        {% if profile.phone_confirmed %}
+          <span class="px-3 py-1 bg-green-600 rounded-full text-sm">Verified</span>
+        {% else %}
+          <span class="px-3 py-1 bg-red-600 rounded-full text-sm">Pending</span>
+        {% endif %}
+      </li>
+      <li class="flex items-center justify-between">
+        <span>KYC Submission</span>
+        {% if profile.kyc_status == "approved" %}
+          <span class="px-3 py-1 bg-green-600 rounded-full text-sm">Approved</span>
+        {% elif profile.kyc_status == "pending" %}
+          <span class="px-3 py-1 bg-yellow-500 rounded-full text-sm">Pending</span>
+        {% elif profile.kyc_status == "rejected" %}
+          <span class="px-3 py-1 bg-red-500 rounded-full text-sm">Rejected</span>
+        {% else %}
+          <span class="px-3 py-1 bg-gray-600 rounded-full text-sm">Not Submitted</span>
+        {% endif %}
+      </li>
+    </ul>
+
+    {% if profile.kyc_status == "rejected" or profile.kyc_status == "not_submitted" %}
+    <div class="mt-8 text-center">
+      <a href="{% url 'authentication:submit' %}" class="inline-block bg-green-500 hover:bg-green-600 text-black font-semibold px-6 py-2 rounded-md transition">
+        Submit KYC Now
+      </a>
+    </div>
+  {% elif profile.kyc_status == "pending" %}
+    <p class="text-yellow-400 mt-6 text-center font-medium">Your KYC is under review. You will be notified once it's approved.</p>
+  {% endif %}
+  
+  </div>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
